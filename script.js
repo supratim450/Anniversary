@@ -1,15 +1,27 @@
 let currentPage = 1;
 
-function nextPage(){
+function typeMessage(){
 
-document.getElementById("page"+currentPage).classList.remove("active");
+let text="Thank you for coming into my life, you are the best, you are the most precious, you have made my life full of colours and with you i am always winning in life, thank you for everything 💖";
 
-currentPage++;
+let i=0;
 
-if(currentPage>3){
-currentPage=3;
+let speed=50;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typed").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,speed);
+
 }
 
-document.getElementById("page"+currentPage).classList.add("active");
+}
+
+typing();
 
 }
